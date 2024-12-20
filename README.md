@@ -69,7 +69,7 @@ Untuk memulai aplikasi Flask, pastikan model telah dilatih dan bobot model telah
 Aplikasi Flask dapat dijalankan dengan perintah berikut:
 
 ```
-python app.py
+python app/app.py
 ```
 
 Aplikasi akan berjalan di `http://127.0.0.1:5000/`, dan antarmuka web dapat diakses untuk mengunggah gambar dan memprediksi apakah gambar tersebut adalah Rock, Scissors, atau Paper.
