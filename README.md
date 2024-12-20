@@ -1,3 +1,7 @@
+Berikut adalah versi yang telah diperbaiki tanpa penggunaan kata ganti orang:
+
+---
+
 # Technical Report: Rock Scissors Paper
 
 Proyek ini adalah model klasifikasi sederhana untuk permainan Rock, Scissors, Paper menggunakan berbagai arsitektur deep learning. Model yang digunakan termasuk AlexNet, VGG16, ResNet18, dan ResNet50. Proyek ini juga mencakup aplikasi web Flask untuk menguji model yang telah dilatih melalui antarmuka unggah gambar.
@@ -21,16 +25,16 @@ Dataset yang digunakan untuk pelatihan terdiri dari gambar yang dikategorikan ke
 ## Menjalankan Pelatihan Model
 
 ### Langkah 1: Install Dependensi
-Pastikan Anda telah menginstal pustaka berikut:
+Pustaka berikut perlu diinstal:
 - torch
 - torchvision
 - pandas
 - flask
 - pillow
 
-Anda dapat menginstalnya menggunakan perintah berikut:
+Semua modul sudah ada di `requirements.txt`. Install dependensi dengan perintah berikut:
 ```
-pip install torch torchvision pandas flask pillow
+pip install -r requirements.txt
 ```
 
 ### Langkah 2: Melatih Model
@@ -52,7 +56,7 @@ Contoh:
 python train.py --model alexnet --data_dir ./data --epochs 10 --batch_size 32 --lr 0.001
 ```
 
-Ini akan melatih model, mengevaluasi pada set validasi, dan menyimpan bobot model yang telah di-fine-tune di direktori `result_train_model`.
+Proses ini akan melatih model, mengevaluasi pada set validasi, dan menyimpan bobot model yang telah di-fine-tune di direktori `result_train_model`.
 
 ### Langkah 3: Hasil Pelatihan Model
 Proses pelatihan akan menghasilkan file CSV (`model_name_training_results.csv`) yang berisi loss pelatihan, loss validasi, dan akurasi validasi per epoch. Model yang telah di-fine-tune akan disimpan dengan nama `model_name_fine_tuned.pth`.
@@ -60,19 +64,19 @@ Proses pelatihan akan menghasilkan file CSV (`model_name_training_results.csv`) 
 ## Menjalankan Aplikasi Flask
 
 ### Langkah 1: Menyiapkan Aplikasi Flask
-Untuk memulai aplikasi Flask, pastikan Anda telah melatih model dan menyimpan bobot model.
+Untuk memulai aplikasi Flask, pastikan model telah dilatih dan bobot model telah disimpan.
 
 1. Pastikan model telah di-fine-tune dan file bobot model (misalnya `alexnet_fine_tuned.pth`) ada di direktori yang sesuai.
 2. Siapkan aplikasi Flask dengan menempatkan file model yang telah di-fine-tune (misalnya `alexnet_fine_tuned.pth`) di direktori yang sesuai.
 
 ### Langkah 2: Menjalankan Aplikasi Flask
-Anda dapat menjalankan aplikasi Flask dengan perintah berikut:
+Aplikasi Flask dapat dijalankan dengan perintah berikut:
 
 ```
 python app.py
 ```
 
-Ini akan memulai aplikasi Flask di `http://127.0.0.1:5000/`. Anda dapat mengakses antarmuka web dan mengunggah gambar untuk memprediksi apakah gambar tersebut adalah Rock, Scissors, atau Paper.
+Aplikasi akan berjalan di `http://127.0.0.1:5000/`, dan antarmuka web dapat diakses untuk mengunggah gambar dan memprediksi apakah gambar tersebut adalah Rock, Scissors, atau Paper.
 
 ### Langkah 3: Alur Kerja Aplikasi Flask
 - Aplikasi menyediakan antarmuka untuk mengunggah gambar.
@@ -96,7 +100,4 @@ python app/app.py
 ```
 
 ### 3. Akses Aplikasi Web
-Akses aplikasi di `http://127.0.0.1:5000/` melalui browser Anda, unggah gambar, dan aplikasi akan memprediksi kelas gambar tersebut.
-
-### 4. Hasil Prediksi
-Gambar yang diunggah akan diprediksi oleh model dan kelas yang diprediksi (Rock, Scissors, atau Paper) akan ditampilkan pada antarmuka web.
+Akses aplikasi di `http://127.0.0.1:5000/` melalui browser, unggah gambar, dan aplikasi akan memprediksi kelas gambar tersebut.
