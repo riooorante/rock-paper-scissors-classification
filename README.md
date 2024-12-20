@@ -1,4 +1,4 @@
-# Technical Report: Klasifikasi Rock Scissors Paper
+# Technical Report: Rock Scissors Paper
 
 Proyek ini adalah model klasifikasi sederhana untuk permainan Rock, Scissors, Paper menggunakan berbagai arsitektur deep learning. Model yang digunakan termasuk AlexNet, VGG16, ResNet18, dan ResNet50. Proyek ini juga mencakup aplikasi web Flask untuk menguji model yang telah dilatih melalui antarmuka unggah gambar.
 
