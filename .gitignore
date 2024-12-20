@@ -1,0 +1,21 @@
+# PyCharm
+.idea/
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+env/
+venv/
+
+# Log files
+*.log
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+
+# File konfigurasi pribadi
+*.env
